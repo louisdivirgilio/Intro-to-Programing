@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+   
+   <!-- My First Web Page by Louis DiVirgilio 
+      Introduction to Programing- Project 2
+      September 25, 2012-->
+      
+   <head>
+      
+      <title>Totally Original Text Adventure Game</title>
+      
+      <style>
+      		body {background-color:black;}
+      		body {color: white}
+      		
+      </style>
+      
+    	<script type="text/JavaScript">
+         function btn_thing_click(btnNum) {
+            if (btnNum === 1) {
+               var msg = "You are in the woods.";
+               updateText(msg);
+            } else {
+               if (btnNum === 2) {
+                 var msg = "You are in the weeds.";
+                 updateText(msg);                  
+               } else {
+                  alert("This should never happen.");
+               }               
+            }            
+         }
+
+        function updateText(msg){
+           var ta = document.getElementById("taGame");
+           ta.value = msg + "\n" + ta.value;
+        }
+
+      </script>
+  </head>
+  
+  <body>
+      This is my totally original text adventure game, "The GAME".
+      <br>
+      <br>
+      <textarea id="taGame" rows="8" cols="40">You wake up in a field somewhere in upstate New York in the beginning of fall. fjdljflsfjlflslflsjflj 
+      </textarea>
+      
+      <br>
+      
+      <input type="button"
+             value="North"
+             onclick="btn_thing_click(1);">
+
+      <input type="button"
+             value="South"
+             onclick="btn_thing_click(2);">
+		
+	  <input type="button"
+             value="East"
+             onclick="btn_thing_click(3);">
+    
+    
+      <input type="button"
+             value="West"
+             onclick="btn_thing_click(4);">	
+ 
+ 
+ 	  <p class="bottom">
+      	<a href=mailto:loumdivirgilio@gmail.com>E-mail Link</a>
+      </p> 
+      	<a href="http://validator.w3.org/#validate_by_input">Validate</a>
+ 
+
+  </body>
+</html>
